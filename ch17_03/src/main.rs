@@ -75,8 +75,15 @@ impl State for Published {
 	fn approve(self: Box<Self>) -> Box<State> {
 		self
 	}
+
+	fn content<'a>(&self, post: &'a Post) -> &'a str {
+		&post.content
+	}
 }
 
 fn main() {
-	println!("Hello, world!");
+	let mut post = Post::new();
+
+	post.add_text("I ate a salad for lunch today");
+	assert_eq!("", post.content());
 }
