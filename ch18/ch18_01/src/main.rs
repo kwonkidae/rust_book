@@ -41,5 +41,34 @@ fn main() {
 		let (x, y, z) = (1, 2, 3);
 		println!("{} {} {}", x, y, z);
 	}
+
+	let point = (3, 5);
+	print_coordinates(&point);
+
+	{
+		let s = Some(5);
+		// let Some(x) = s;
+		if let Some(x) = s {
+			println!("{}", x);
+		}
+
+		// if let x = 5 {
+		// 	println!("{}", x);
+		// }
+	}
+
+	{
+		let x = 1;
+		match x {
+			1 => println!("one"),
+			2 => println!("two"),
+			3 => println!("three"),
+			_ => println!("anything"),
+		}
+	}
+}
+
+fn print_coordinates(&(x, y): &(i32, i32)) {
+	println!("Current location: ({}, {})",x , y);
 }
   
