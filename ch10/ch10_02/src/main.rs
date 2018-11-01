@@ -38,3 +38,4 @@ fn main() {
 
 	println!("1 new tweet: {}", tweet.summarize());
 }
+
