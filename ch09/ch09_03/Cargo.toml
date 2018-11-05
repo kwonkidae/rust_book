@@ -1,0 +1,6 @@
+[package]
+name = "ch09_03"
+version = "0.1.0"
+authors = ["kwon <kkdosk@naver.com>"]
+
+[dependencies]
